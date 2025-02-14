@@ -1,0 +1,15 @@
+name: "ICloud Photo Downloader"
+description: "Download photos from iCloud to local folder"
+image: icloudpd/icloudpd:1.26.1
+version: "1.0.0"
+slug: "ha-icloudpd-addon"
+init: false
+webui: 8080
+map:
+  - media:rw
+args:
+  - --directory /media/photos
+  - --mfa-provider webui
+  - --password-provider webui
+arch:
+  - amd64

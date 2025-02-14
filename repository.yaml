@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name:
+url: 'https://github.com/Filippo125/ha-icloudpd-addon'
+maintainer: Filippo Ferrazini <filippo.ferrazini@gmail.com>
