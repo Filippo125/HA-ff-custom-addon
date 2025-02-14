@@ -1,4 +1,4 @@
-name: "ICloud Photo Downloader"
+name: "iCloud Photo Downloader"
 description: "Download photos from iCloud to local folder"
 image: icloudpd/icloudpd:1.26.1
 version: "1.0.0"
