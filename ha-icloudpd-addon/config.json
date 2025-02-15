@@ -47,8 +47,8 @@
  },
   "schema": {
     "DRY_RUN": "bool",
-    "MFA_PROVIDER": "list('console', 'webui')",
-    "PASSWORD_PROVIDER": "list('parameter', 'webui')",
+    "MFA_PROVIDER": "list(console|webui)",
+    "PASSWORD_PROVIDER": "list(parameter|webui)",
     "DEBUG": "bool",
     "ICLOUD_DIRECTORY": "str",
     "ICLOUD_USERNAME": "str",
@@ -60,7 +60,7 @@
     "ICLOUD_SKIP_LIVE_PHOTOS": "bool",
     "ICLOUD_FOLDER_STRUCTURE": "str",
     "ICLOUD_SET_EXIF_DATETIME": "bool",
-    "ICLOUD_LOG_LEVEL": "list('info', 'debug','error')",
+    "ICLOUD_LOG_LEVEL": "list(info|debug|error)",
     "ICLOUD_NO_PROGRESS_BAR": "bool",
     "ICLOUD_DELETE_AFTER_DOWNLOAD": "bool"
   }
