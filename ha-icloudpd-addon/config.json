@@ -25,5 +25,35 @@
   "slug": "icloud_photo_downloader",
   "startup": "services",
   "url": "https://github.com/Filippo125/ha-icloudpd-addon",
-  "version": "1.26.1dev1"
+  "version": "1.26.1dev1",
+    "options": {
+    "icloud_directory": "/config/icloud_photos",
+    "icloud_username": "your-email@example.com",
+    "icloud_password": "your-password",
+    "icloud_auth_only": false,
+    "icloud_recent": 0,
+    "icloud_album": "",
+    "icloud_skip_videos": false,
+    "icloud_skip_live_photos": false,
+    "icloud_folder_structure": "{:%Y/%m}",
+    "icloud_set_exif_datetime": true,
+    "icloud_log_level": "info",
+    "icloud_no_progress_bar": false,
+    "icloud_delete_after_download": false
+  },
+  "schema": {
+    "icloud_directory": "str",
+    "icloud_username": "str",
+    "icloud_password": "password",
+    "icloud_auth_only": "bool?",
+    "icloud_recent": "int?",
+    "icloud_album": "str?",
+    "icloud_skip_videos": "bool?",
+    "icloud_skip_live_photos": "bool?",
+    "icloud_folder_structure": "str?",
+    "icloud_set_exif_datetime": "bool?",
+    "icloud_log_level": "str?",
+    "icloud_no_progress_bar": "bool?",
+    "icloud_delete_after_download": "bool?"
+  }
 }
