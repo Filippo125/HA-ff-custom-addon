@@ -7,7 +7,7 @@
   ],
   "description": "Download photos from iCloud to local folder",
   "docker_api": true,
-  "image": "icloudpd/icloudpd:1.26.1",
+  "image": "icloudpd/icloudpd",
   "ingress": true,
   "ingress_port": 8080,
   "init": false,
