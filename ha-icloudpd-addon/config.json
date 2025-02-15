@@ -7,7 +7,7 @@
   ],
   "description": "Download photos from iCloud to local folder",
   "docker_api": true,
-  "image": "icloudpd/icloudpd",
+  "image": "filippo125/ha-icloudpd-addon",
   "ingress": true,
   "ingress_port": 8080,
   "init": false,
@@ -25,5 +25,5 @@
   "slug": "icloud_photo_downloader",
   "startup": "services",
   "url": "https://github.com/Filippo125/ha-icloudpd-addon",
-  "version": "1.26.1"
+  "version": "1.26.1dev1"
 }
