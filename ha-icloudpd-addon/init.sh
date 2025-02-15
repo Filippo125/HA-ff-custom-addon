@@ -45,7 +45,7 @@ else
 fi
 
 COMMAND="/app/icloudpd_ex icloudpd"
-[ "$DRY_RUN"  = "true" ] && COMMAND="$COMMAND --dry-run"
+#[ "$DRY_RUN"  = "true" ] && COMMAND="$COMMAND --dry-run"
 [ -n "$PASSWORD_PROVIDER" ] && COMMAND="$COMMAND --password-provider \"$PASSWORD_PROVIDER\""
 [ -n "$MFA_PROVIDER" ] && COMMAND="$COMMAND --mfa-provider \"$MFA_PROVIDER\""
 [ -n "$ICLOUD_DIRECTORY" ] && COMMAND="$COMMAND --directory \"$ICLOUD_DIRECTORY\""

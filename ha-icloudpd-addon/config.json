@@ -25,7 +25,7 @@
   "slug": "icloud_photo_downloader",
   "startup": "services",
   "url": "https://github.com/Filippo125/ha-icloudpd-addon",
-  "version": "1.26.1dev7",
+  "version": "1.26.1dev8",
  "options": {
     "DEBUG": false,
     "ICLOUD_DIRECTORY": "/data/icloud",
