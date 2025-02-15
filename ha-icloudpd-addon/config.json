@@ -25,5 +25,5 @@
   "slug": "icloud_photo_downloader",
   "startup": "services",
   "url": "https://github.com/Filippo125/ha-icloudpd-addon",
-  "version": "2025.02.0"
+  "version": "1.26.1"
 }
