@@ -25,11 +25,11 @@
   "slug": "icloud_photo_downloader",
   "startup": "services",
   "url": "https://github.com/Filippo125/ha-icloudpd-addon",
-  "version": "1.26.1dev2",
-    "options": {
-    "icloud_directory": "/config/icloud_photos",
-    "icloud_username": "your-email@example.com",
-    "icloud_password": "your-password",
+  "version": "1.26.1dev3",
+  "options": {
+    "icloud_directory": "/media/icloud",
+    "icloud_username": "",
+    "icloud_password": "",
     "icloud_auth_only": false,
     "icloud_recent": 0,
     "icloud_album": "",
