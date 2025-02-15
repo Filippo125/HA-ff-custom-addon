@@ -4,15 +4,7 @@ image: icloudpd/icloudpd:1.26.1
 version: "1.0.0"
 slug: "ha-icloudpd-addon"
 init: false
-webui: 8080
-panel_icon: mdi:cloud-download
+panel_icon: "mdi:cloud-download"
 panel_title: "iCloud Photo Downloader"
 panel_admin: true
-map:
-  - media:rw
-args:
-  - --directory /media/photos
-  - --mfa-provider webui
-  - --password-provider webui
-arch:
-  - amd64
+arch: ["armhf", "armv7", "aarch64", "amd64", "i386"],
