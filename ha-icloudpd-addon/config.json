@@ -15,7 +15,7 @@
     "media:rw"
   ],
   "ports": {
-    "8080/tcp": null
+    "8080/tcp": 8080
   },
   "ports_description": {
     "8080/tcp": "Port for exposing icloudpd webui"
@@ -25,11 +25,12 @@
   "slug": "icloud_photo_downloader",
   "startup": "services",
   "url": "https://github.com/Filippo125/ha-icloudpd-addon",
-  "version": "1.26.1dev4",
+  "version": "1.26.1dev5",
  "options": {
+    "DEBUG": false,
     "ICLOUD_DIRECTORY": "/data/icloud",
-    "ICLOUD_USERNAME": "tuo_username",
-    "ICLOUD_PASSWORD": "tuo_password",
+    "ICLOUD_USERNAME": "",
+    "ICLOUD_PASSWORD": "",
     "ICLOUD_AUTH_ONLY": false,
     "ICLOUD_RECENT": 0,
     "ICLOUD_ALBUM": "",
@@ -39,12 +40,19 @@
     "ICLOUD_SET_EXIF_DATETIME": false,
     "ICLOUD_LOG_LEVEL": "INFO",
     "ICLOUD_NO_PROGRESS_BAR": false,
-    "ICLOUD_DELETE_AFTER_DOWNLOAD": false
-  },
+    "ICLOUD_DELETE_AFTER_DOWNLOAD": false,
+    "MFA_PROVIDER": "webui",
+    "PASSWORD_PROVIDER": "webui",
+    "DRY_RUN": true
+ },
   "schema": {
+    "DRY_RUN": "bool",
+    "MFA_PROVIDER": "list('console', 'webui')",
+    "PASSWORD_PROVIDER": "list('parameter', 'webui')",
+    "DEBUG": "bool",
     "ICLOUD_DIRECTORY": "str",
     "ICLOUD_USERNAME": "str",
-    "ICLOUD_PASSWORD": "str",
+    "ICLOUD_PASSWORD": "password",
     "ICLOUD_AUTH_ONLY": "bool",
     "ICLOUD_RECENT": "int",
     "ICLOUD_ALBUM": "str",
@@ -52,7 +60,7 @@
     "ICLOUD_SKIP_LIVE_PHOTOS": "bool",
     "ICLOUD_FOLDER_STRUCTURE": "str",
     "ICLOUD_SET_EXIF_DATETIME": "bool",
-    "ICLOUD_LOG_LEVEL": "str",
+    "ICLOUD_LOG_LEVEL": "list('info', 'debug','error')",
     "ICLOUD_NO_PROGRESS_BAR": "bool",
     "ICLOUD_DELETE_AFTER_DOWNLOAD": "bool"
   }
