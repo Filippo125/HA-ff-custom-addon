@@ -1,0 +1,4 @@
+#!/command/with-contenv bashio
+set -euo pipefail
+bashio::log.info "Avvio dnsmasq..."
+exec dnsmasq -k --clear-on-reload
