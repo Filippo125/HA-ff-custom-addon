@@ -10,11 +10,10 @@
     "aarch64",
     "amd64",
     "armv7",
-    "armhf",
-    "i386"
+    "armhf"
   ],
   "ingress": false,
-  "docker_api": "true,",
+  "docker_api": "true",
   "image": "dockurr/dnsmasq",
   "panel_icon": "mdi:dns",
   "panel_admin": false,
