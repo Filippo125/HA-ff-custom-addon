@@ -1,0 +1,94 @@
+{
+  "name": "dnsmasq (ff)",
+  "version": "1.3.1",
+  "slug": "dnsmasq_ff",
+  "description": "Resolver DNS locale con dnsmasq. Support record host, CNAME, forward upstream, add-mac and advancend configuration.",
+  "url": "https://github.com/Filippo125/HA-ff-custom-addon/dnsmasq-addon",
+  "startup": "services",
+  "init": false,
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armv7",
+    "armhf",
+    "i386"
+  ],
+  "ingress": false,
+  "docker_api": "true,",
+  "image": "dockurr/dnsmasq",
+  "panel_icon": "mdi:dns",
+  "panel_admin": false,
+  "host_network": true,
+  "watchdog": "tcp://127.0.0.1:53",
+  "map": [
+    "config:rw",
+    "share:rw",
+    "ssl:ro"
+  ],
+  "options": {
+    "domain": "lan",
+    "interfaces": [
+      "eth0"
+    ],
+    "upstream_dns": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ],
+    "cache_size": 1000,
+    "log_queries": true,
+    "log_dhcp": false,
+    "add_mac": "disabled",
+    "hosts": [
+      {
+        "host": "home.lan",
+        "ip": "192.168.1.10"
+      }
+    ],
+    "cnames": [
+      {
+        "alias": "nas.local",
+        "target": "nas.lan"
+      }
+    ],
+    "forwards": [
+      {
+        "domain": "corp.local",
+        "server": "10.0.0.53"
+      }
+    ],
+    "advanced": ""
+  },
+  "schema": {
+    "domain": "str",
+    "interfaces": [
+      "str"
+    ],
+    "upstream_dns": [
+      "str"
+    ],
+    "cache_size": "int(0,100000)",
+    "log_queries": "bool",
+    "log_dhcp": "bool",
+    "add_mac": "list(disabled|base64|text)",
+    "hosts": [
+      {
+        "host": "str",
+        "ip": "str"
+      }
+    ],
+    "cnames": [
+      {
+        "alias": "str",
+        "target": "str"
+      }
+    ],
+    "forwards": [
+      {
+        "domain": "str",
+        "server": "str"
+      }
+    ],
+    "advanced": "str?"
+  },
+  "privileged": []
+}

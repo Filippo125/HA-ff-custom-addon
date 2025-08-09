@@ -1,4 +1,4 @@
-FROM dockurr/dnsmasq
+FROM dockurr/dnsmasq:2.91
 
 LABEL \
   io.hass.name="dnsmasq (custom)" \
