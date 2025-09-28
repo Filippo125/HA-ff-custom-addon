@@ -1,0 +1,31 @@
+name: "go2rtc + neolink (Reolink 2-way)"
+slug: "go2rtc_neolink"
+version: "0.1.0"
+description: "go2rtc con backchannel via neolink talk per campanelli/telecamere Reolink"
+arch:
+  - aarch64
+  - amd64
+startup: services
+init: false
+webui: "http://[HOST]:[PORT:1984]"
+ports:
+  "1984/tcp": 1984   # interfaccia web/API go2rtc
+  "8554/tcp": 8554   # RTSP opzionale
+map:
+  - type: data
+    read_only: false
+  - type: ssl
+    read_only: true
+schema:
+  camera_ip: str
+  username: str
+  password: str
+  stream:
+    - match(main|sub)
+  extra_streams: "str?"
+options:
+  camera_ip: "192.168.1.50"
+  username: "admin"
+  password: "changeme"
+  stream: "sub"
+  extra_streams: ""
