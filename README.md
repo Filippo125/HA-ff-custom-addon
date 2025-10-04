@@ -1,6 +1,7 @@
 # Filippo Home Assistant Add-ons
 
-Collection of custom Home Assistant add-ons maintained by Filippo Ferrazini. Each directory contains an add-on ready to install through a custom repository.
+Collection of custom Home Assistant add-ons.
+Each directory contains an add-on ready to install through a custom repository.
 
 ## Add-on Index
 
@@ -8,7 +9,7 @@ Collection of custom Home Assistant add-ons maintained by Filippo Ferrazini. Eac
 | --- | --- | --- |
 | iCloud Photo Downloader | `ha-icloudpd-addon` | Automatically downloads photos from iCloud into a Home Assistant folder |
 | go2rtc + neolink (Reolink 2-way) | `go2rtc_neolink` | Runs go2rtc with backchannel audio support via neolink for Reolink doorbells/cameras |
-| dnsmasq (ff) | `dnsmasq_ff` | Local DNS resolver based on dnsmasq with host records, CNAME, forwarding, and add-mac |
+| dnsmasq (ff) | `dnsmasq_ff` | Local DNS resolver based on dnsmasq with host records, CNAME, forwarding with several other options |
 
 ## iCloud Photo Downloader (`ha-icloudpd-addon`)
 
