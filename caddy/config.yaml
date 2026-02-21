@@ -1,0 +1,47 @@
+name: "Caddy (OVH DNS)"
+slug: "caddy_ovh"
+description: "Caddy 2 reverse proxy con ACME DNS-01 su OVH (dns.providers.ovh)"
+version: "1.0.0"
+url: "https://github.dev/Filippo125/HA-ff-custom-addon/caddy"
+startup: services
+boot: auto
+stage: experimental
+init: false
+build: true
+
+arch:
+  - aarch64
+  - amd64
+  - armv7
+  - i386
+
+ports:
+  80/tcp: 80
+  443/tcp: 443
+
+ports_description:
+  80/tcp: "HTTP (opzionale, per redirect o servizi non-TLS)"
+  443/tcp: "HTTPS (Caddy reverse proxy)"
+
+map:
+  - share:rw
+
+options:
+  domain: "ha.tuodominio.it"
+  email: "admin@tuodominio.it"
+  ha_upstream: "http://homeassistant:8123"
+  ovh_endpoint: "ovh-eu"
+  ovh_application_key: ""
+  ovh_application_secret: ""
+  ovh_consumer_key: ""
+  prefer_custom_caddyfile: true
+
+schema:
+  domain: str
+  email: str
+  ha_upstream: str
+  ovh_endpoint: str
+  ovh_application_key: str
+  ovh_application_secret: str
+  ovh_consumer_key: str
+  prefer_custom_caddyfile: bool
